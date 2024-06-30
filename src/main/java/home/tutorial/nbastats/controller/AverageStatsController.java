@@ -4,8 +4,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
-import home.tutorial.nbastats.dto.TeamStatsDTO;
-import home.tutorial.nbastats.model.TeamStats;
 import home.tutorial.nbastats.service.AverageStatsService;
 import java.io.IOException;
 import java.io.OutputStream;

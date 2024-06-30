@@ -14,13 +14,11 @@ public class PlayerStatsService {
         this.repository = repository;
     }
 
-    // Обновление: использование мэппера для преобразования DTO в модель
     public void savePlayerStats(PlayerStatsDTO statsDTO) throws SQLException {
         PlayerStats stats = PlayerStatsMapper.toModel(statsDTO);
         repository.save(stats);
     }
 
-    // Обновление: использование мэппера для преобразования модели в DTO
     public PlayerStatsDTO getPlayerAverageStats(int playerId) throws SQLException {
         PlayerStats stats = repository.findPlayerAverageStats(playerId);
         if (stats == null) {

@@ -5,16 +5,16 @@ import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 
 @JsonDeserialize(builder = PlayerStats.Builder.class)
 public class PlayerStats {
-    private int playerId;
-    private int teamId;
-    private int points;
-    private int rebounds;
-    private int assists;
-    private int steals;
-    private int blocks;
-    private int fouls;
-    private int turnovers;
-    private float minutesPlayed;
+    private final int  playerId;
+    private final int teamId;
+    private final int points;
+    private final int rebounds;
+    private final int assists;
+    private final int steals;
+    private final int blocks;
+    private final int fouls;
+    private final int turnovers;
+    private final float minutesPlayed;
 
     private PlayerStats(Builder builder) {
         this.playerId = builder.playerId;

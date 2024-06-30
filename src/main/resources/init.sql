@@ -1,4 +1,4 @@
-CREATE TABLE player_stats
+CREATE TABLE IF NOT EXISTS player_stats
 (
     id             SERIAL PRIMARY KEY,
     player_id      INT NOT NULL,

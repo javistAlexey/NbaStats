@@ -27,7 +27,6 @@ public class TeamStats {
         this.minutesPlayed = builder.minutesPlayed;
     }
 
-    // Getters
     public int getTeamId() {
         return teamId;
     }

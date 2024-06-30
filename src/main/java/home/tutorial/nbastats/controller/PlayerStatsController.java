@@ -1,18 +1,17 @@
 package home.tutorial.nbastats.controller;
 
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sun.net.httpserver.HttpExchange;
+import com.sun.net.httpserver.HttpHandler;
+import com.sun.net.httpserver.HttpServer;
 import home.tutorial.nbastats.dto.PlayerStatsDTO;
-import home.tutorial.nbastats.model.PlayerStats;
 import home.tutorial.nbastats.service.PlayerStatsService;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
 import java.sql.SQLException;
-import com.sun.net.httpserver.HttpExchange;
-import com.sun.net.httpserver.HttpHandler;
-import com.sun.net.httpserver.HttpServer;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class PlayerStatsController {
     private final PlayerStatsService service;
@@ -40,7 +39,6 @@ public class PlayerStatsController {
                 }
 
                 PlayerStatsDTO statsDTO;
-                // Обновление: Изменен метод десериализации JSON для использования объекта PlayerStats напрямую
                 try {
                     statsDTO = objectMapper.readValue(body, PlayerStatsDTO.class);
                 } catch (Exception e) {
