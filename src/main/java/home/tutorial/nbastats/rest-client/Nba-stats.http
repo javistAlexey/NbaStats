@@ -1,0 +1,27 @@
+###
+# @name Save stats
+POST http://{{host}}/stats/save
+Content-Type: application/json
+
+{
+  "playerId": 1,
+  "teamId": 101,
+  "points": 23,
+  "rebounds": 11,
+  "assists": 5,
+  "steals": 2,
+  "blocks": 1,
+  "fouls": 3,
+  "turnovers": 4,
+  "minutesPlayed": 34.5
+}
+
+###
+# @name Get Player's Stats
+GET http://{{host}}/stats/average/player?playerId=1
+###
+# @name Get Team's Stats
+GET http://{{host}}/stats/average/team?teamId=101
+
+
+
